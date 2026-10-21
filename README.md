@@ -1,4 +1,4 @@
-# Kodbud Task 4 — Form and Validation
+Form and Validation
 
 A responsive contact form demo made with HTML, CSS, and vanilla JavaScript. This project fulfils the task brief by including Name, Email, Phone, and Message fields and validates empty fields, email format, phone-number length, and message length.
 
