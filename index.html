@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A responsive contact form demo with JavaScript validation." />
+  <title>Let's Connect — Contact Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Kindred home">
+        <span class="brand-mark" aria-hidden="true">✳</span>
+        <span>kindred<span class="brand-dot">.</span></span>
+      </a>
+      <span class="topbar-note"><span class="status-dot" aria-hidden="true"></span> A little space to connect</span>
+    </header>
+
+    <main id="top" class="layout">
+      <section class="intro" aria-labelledby="page-title">
+        <span class="eyebrow"><span aria-hidden="true">✦</span> CONTACT STUDIO</span>
+        <h1 id="page-title">Good things<br />start with <span>a hello.</span></h1>
+        <p class="intro-copy">Have a question, an idea, or something lovely to share? Fill in the form and leave the first hello to us.</p>
+
+        <div class="note-card">
+          <div class="note-icon" aria-hidden="true">✉</div>
+          <div>
+            <p class="note-title">A note before you go</p>
+            <p class="note-copy">Every great conversation starts somewhere. Make yourself comfortable and tell us what is on your mind.</p>
+          </div>
+          <span class="note-spark" aria-hidden="true">✧</span>
+        </div>
+
+        <div class="contact-details">
+          <div class="detail-icon" aria-hidden="true">↗</div>
+          <div>
+            <p class="detail-label">Prefer a direct hello?</p>
+            <a href="mailto:hello@example.com">hello@example.com</a>
+          </div>
+        </div>
+        <p class="demo-note">Student project demo · This form does not send or store your information.</p>
+      </section>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <div class="form-heading">
+          <div>
+            <p class="form-kicker">YOUR TURN</p>
+            <h2 id="form-title">Tell us a little.</h2>
+          </div>
+          <div class="heading-sticker" aria-hidden="true">✿</div>
+        </div>
+        <p class="form-subtitle">Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="field-group">
+            <label for="name">Your name <span>*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" aria-describedby="nameError" required />
+            <small class="error-message" id="nameError"></small>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email address <span>*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="alex@example.com" aria-describedby="emailError" required />
+            <small class="error-message" id="emailError"></small>
+          </div>
+
+          <div class="field-group">
+            <label for="phone">Phone number <span>*</span></label>
+            <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="e.g. +91 98765 43210" aria-describedby="phoneHint phoneError" required />
+            <small class="field-hint" id="phoneHint">Include your country code if you use one.</small>
+            <small class="error-message" id="phoneError"></small>
+          </div>
+
+          <div class="field-group">
+            <div class="label-row">
+              <label for="message">Your message <span>*</span></label>
+              <span id="characterCount" class="character-count">0 / 500</span>
+            </div>
+            <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Tell us what is on your mind..." aria-describedby="messageError characterCount" required></textarea>
+            <small class="error-message" id="messageError"></small>
+          </div>
+
+          <button class="submit-button" type="submit">Send your hello <span aria-hidden="true">↗</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="required-reminder"><span aria-hidden="true">✦</span> Please double-check your details before sending.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Kindred Studio</span>
+      <span>Made with care <span class="footer-heart" aria-label="love">♥</span></span>
+    </footer>
+  </div>
+</body>
+</html>
